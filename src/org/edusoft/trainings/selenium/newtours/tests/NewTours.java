@@ -1,5 +1,6 @@
 package org.edusoft.trainings.selenium.newtours.tests;
 import org.edusoft.trainings.selenium.newtours.pages.RegistrationPage;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 
@@ -42,6 +43,34 @@ public class NewTours extends BaseTest
 			
 	}
 	
+	
+	@Test
+	public  void test01() {
+		
+		//click on registration 
+		homepage.launchUrl(driver, url);
+		
+		//get current title
+		
+		if( driver.getTitle().equalsIgnoreCase("WELCOME: Mercury Tours")){
+			System.out.println("pass");
+			
+		}
+		else
+		{
+			System.out.println("fail");
+		}
+		
+		//compare with 
+	
+		//verification point 
+		Assert.assertEquals("Welcome: Mercury Tours", driver.getTitle());
+		
+		
+		
+		
+			
+	}
 
 
 }

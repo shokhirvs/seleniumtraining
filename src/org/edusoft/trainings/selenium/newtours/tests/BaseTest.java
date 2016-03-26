@@ -42,6 +42,9 @@ public class BaseTest {
 		else if (browser.equalsIgnoreCase("firefox")) {
 			driver = BrowserFactory.getFireFoxDriver();
 		}
+		else if (browser.equalsIgnoreCase("ie")) {
+			driver = BrowserFactory.getIEDriver();
+		}
 		else{
 			//stop execuiton
 //			System.exit(0); //not recommeded

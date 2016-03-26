@@ -34,10 +34,14 @@ public class BrowserFactory {
 	}
 	
 	public static WebDriver getIEDriver(){
+			
+		System.setProperty("webdriver.ie.driver", "C:\\automation\\lib\\drivers\\ie\\IEDriverServer.exe");
+		
 		WebDriver driver = new InternetExplorerDriver();
 		
-		// Maximize the window.
+	
 		driver.manage().window().maximize();
+		
 		
 		return driver;
 		
