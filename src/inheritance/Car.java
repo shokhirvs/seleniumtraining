@@ -8,4 +8,6 @@ public class Car {
 	float milage;
 	
 	//add comment
+	
+	//new comment
 }
