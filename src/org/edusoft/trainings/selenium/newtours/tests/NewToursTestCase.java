@@ -1,10 +1,11 @@
 package org.edusoft.trainings.selenium.newtours.tests;
+import org.edusoft.trainings.selenium.commonutils.GenenicUtils;
 import org.edusoft.trainings.selenium.newtours.pages.RegistrationPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 
-public class NewTours extends BaseTest
+public class NewToursTestCase extends BaseTest
 {
 	
 
@@ -36,10 +37,12 @@ public class NewTours extends BaseTest
 		
 		
 		//fill details 
-		registrationpage.fillDeatils(driver);
+		registrationpage.fillDetails(driver);
+		
+		GenenicUtils.takeScreenShot(driver,"c:\\automation\\scr2.jpg");
 		
 		//submit
-		//registrationpage.submit(driver);
+		registrationpage.clicksignin(driver);
 			
 	}
 	

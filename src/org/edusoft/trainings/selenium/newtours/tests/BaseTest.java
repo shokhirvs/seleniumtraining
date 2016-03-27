@@ -18,7 +18,8 @@ public class BaseTest {
 	public static WebDriver driver;
 	public HomePage homepage;
 	
-	 @BeforeSuite
+	// @BeforeSuite...common to all 
+	@BeforeSuite
 	 protected void setupSuite(){
 			System.out.println("Entering setup suite");
 			url = "http://newtours.demoaut.com/";
@@ -27,7 +28,7 @@ public class BaseTest {
 		}
 
 
-	// pass browser name as parameter
+	// pass browser name as parameter....prerequisite for individual test
 	@BeforeMethod
 //	@Parameters("browser")
 //	@Optional String browser
